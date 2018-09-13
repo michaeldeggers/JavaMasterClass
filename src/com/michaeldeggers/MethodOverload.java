@@ -30,21 +30,27 @@ public class MethodOverload {
     }
 
     public static double calcFeetAndInchesToCentimeters(double feet, double inches) {
-        double result = -1;
+        double result;
 
-        if (feet >= 0 && (inches >= 0 && inches <= 12)) {
+        if (feet >= 0 && ((inches >= 0) && (inches <= 12))) {
             inches += feet * 12;
             result = inches * 2.54;
+        } else {
+            result = -1;
+            System.out.println("Error: Invalid parameters.");
         }
 
         return result;
     }
 
     public static double calcFeetAndInchesToCentimeters(double inches) {
-        double result = -1;
+        double result;
 
         if (inches >= 0) {
             result = inches * 2.54;
+        } else {
+            result = -1;
+            System.out.println("Error: Invalid parameters.");
         }
 
         return result;
