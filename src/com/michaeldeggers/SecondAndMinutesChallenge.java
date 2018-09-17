@@ -11,6 +11,9 @@ package com.michaeldeggers;
 // notes: 61 min, output 01h 01m 00s
 
 public class SecondAndMinutesChallenge {
+
+    private static final String INVALID_VALUE_MESSAGE = "Invalid Value"; // similar to JS const
+
     public static void main(String[] args) {
         System.out.println("Expected Valid:");
 
@@ -69,7 +72,7 @@ public class SecondAndMinutesChallenge {
 
             result = hoursString + " " + minutesString + " " + secondsString + ".";
         } else {
-            result = "Invalid Value";
+            result = INVALID_VALUE_MESSAGE;
         }
 
         return result;
@@ -83,7 +86,7 @@ public class SecondAndMinutesChallenge {
             int remainingSeconds = seconds % 60;
             result = getDurationString(minutes, remainingSeconds);
         } else {
-            result = "Invalid Value";
+            result = INVALID_VALUE_MESSAGE;
         }
 
         return result;
