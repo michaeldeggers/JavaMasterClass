@@ -37,14 +37,19 @@ public class While {
 
         int number = 4;
         int finishNumber = 22;
+        int evenCount = 0;
 
         while (number <= finishNumber) {
             number++;
 
             if (!isEvenNumber(number)) continue;
-
             System.out.println("Even Number " + number);
+
+            evenCount++;
+            if (evenCount >= 5) break;
         }
+
+        System.out.println("Total even numbers: " + evenCount);
     }
 
     public static boolean isEvenNumber(int num) {
